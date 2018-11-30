@@ -1,24 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace Ejercicio_6
+namespace Tarea_6_metodos
 {
-    class Program
+    static class Program
     {
-        static void Main(string[] args)
+        /// <summary>
+        /// Punto de entrada principal para la aplicación.
+        /// </summary>
+        [STAThread]
+        static void Main()
         {
-            int x = 0;
-            try
-            {
-                int y = 100 / x;
-            }
-            catch (ArithmeticException e)
-            {
-                Console.WriteLine("ArithmeticException Handler: {0}", e.ToString());
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Generic Exception Handler: {0}", e.ToString());
-            }
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Principal());
         }
     }
 }
