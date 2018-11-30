@@ -1,22 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
-namespace Ejercicio_TimeSpan
+namespace Ejercicio_6
 {
-    static class Program
+    class Program
     {
-        /// <summary>
-        /// Punto de entrada principal para la aplicación.
-        /// </summary>
-        [STAThread]
-        static void Main()
+        static void Main(string[] args)
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Menu_Principal());
+            int x = 0;
+            try
+            {
+                int y = 100 / x;
+            }
+            catch (ArithmeticException e)
+            {
+                Console.WriteLine("ArithmeticException Handler: {0}", e.ToString());
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Generic Exception Handler: {0}", e.ToString());
+            }
         }
     }
 }
